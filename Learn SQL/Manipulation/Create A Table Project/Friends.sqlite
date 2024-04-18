@@ -1,0 +1,49 @@
+CREATE TABLE friends(
+  id INTEGER,
+  name TEXT,
+  birthday DATE
+);
+
+/*FIRST ENTRY */
+INSERT INTO friends(id, name, birthday)
+VALUES(1, 'Ororo Munroe', '30-05-1940');
+
+/*Entry Inspection*/
+SELECT * 
+FROM friends;
+
+/*INSERTING MY FRIENDS*/
+INSERT INTO friends(id, name, birthday)
+VALUES(2, 'Lesego Mogorosi', '23-08-1998');
+INSERT INTO friends(id, name, birthday)
+VALUES(3, 'Omolemo Molale', '10-11-2005');
+
+/*UPDATING ORORO'S RECORDS*/
+UPDATE friends 
+SET name = 'Storm'
+WHERE name = 'Ororo Munroe';
+
+/* ADDING AN ADDITIONAL COLUMN */
+ALTER TABLE friends
+ADD COLUMN email TEXT;
+
+/* UPDATING THE NEW COLUMN*/
+UPDATE friends
+SET email = 'storm@codecademy.com'
+WHERE name = 'Storm';
+
+UPDATE friends
+SET email = 'lesego@gmail.com'
+WHERE name = 'Lesego Mogorosi';
+
+UPDATE friends
+SET email = 'Omolemo@gmail.com'
+WHERE name = 'Omolemo Molale';
+
+/*Delete The Fictional Character*/
+DELETE FROM friends
+WHERE name = 'Storm';
+
+/*FINAL OUTPUT*/
+SELECT * 
+FROM friends;
