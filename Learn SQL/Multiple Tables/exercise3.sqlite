@@ -1,0 +1,12 @@
+-- First query
+SELECT *
+FROM newspaper
+LEFT JOIN online
+	ON newspaper.id = online.id;
+  
+-- Second query
+SELECT *
+FROM newspaper
+LEFT JOIN online
+	ON newspaper.id = online.id
+WHERE online.id IS NULL;
